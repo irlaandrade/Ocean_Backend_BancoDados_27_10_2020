@@ -1,3 +1,69 @@
+# Explicação sobre Banco de Dados
+
+**SQL vs NoSQL**
+
+**NoSQL:** Not-only SQL
+
+**SQL:** trabalha principalmente com relacionamento entre as informações, então fica mais fácil pra gente "amarrar" o dado (conectá-lo de alguma forma).
+
+**SQL** -> Relacionamento entre as informações, utilização de Foreign Key, Inner Join e outros conceitos para buscar informações relacionadas.
+
+**NoSQL** -> Armazenamento de informações mais soltas, e que possuem uma certa independência maior.
+
+## Tecnologias disponíveis
+
+**SQL:** MySQL, MariaDB, PostgreSQL, OracleDB, SQL Server, entre outros, entre outros
+
+**NoSQL:** MongoDB, DynamoDB, Cassandra, Redis, HBase, Neo4j, Firebase Realtime Database, entre outros
+
+### MongoDB
+
+Consigo armazenar documentos completamente diferentes em uma mesma "tabela" (que aqui no mongo, chamamos de `collection`)
+
+Linguagem de consulta (Query Language) para buscar nos documentos, utilizando JavaScript para isso.
+
+## Exemplo de tabela no SQL
+
+Banco de dados para aplicação de envio de mensagens
+
+Tabela `mensagens`:
+
+- `id (int 11)`
+- `texto (varchar 255)`
+- `usuario (varchar 255)`
+- `criado (datetime)`
+- `modificado (datetime)`
+
+**Exemplo de query para criação de registro:**
+
+```mariadb
+INSERT INTO `mensagens` (`id`, `texto`, `usuario`, `criado`, `modificado`) VALUES (NULL, 'Essa é uma mensagem', 'Paulo Salvatore', '2020-10-27 18:29:38', '2020-10-27 18:29:38');
+```
+
+**Exemplo de query para visualização de registros:**
+
+```mariadb
+SELECT * FROM `mensagens`;
+```
+
+**Exemplo de query para visualizar apenas um registro:**
+
+```mariadb
+SELECT * FROM `mensagens` WHERE `mensagens`.`id` = 1;
+```
+
+**Exemplo de query para consulta de registros:**
+
+```mariadb
+UPDATE `mensagens` SET `texto` = 'Essa é uma mensagem com o texto editado' WHERE `mensagens`.`id` = 1;
+```
+
+**Exemplo de query para remoção de registros:**
+
+```mariadb
+DELETE FROM `mensagens` WHERE `mensagens`.`id` = 1;
+```
+
 # Instalação e configuração do projeto
 
 1. Baixar o repositório em https://github.com/paulosalvatore/Ocean_Backend_22_10_2020 (clicando em `Code -> Download ZIP`)
