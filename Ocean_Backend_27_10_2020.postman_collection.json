@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "37758713-8f3f-4a84-a00b-d8db9bea7cbf",
+		"name": "Ocean_Backend_27_10_2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{API_URL}}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Ler todas as mensagens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{API_URL}}/mensagem"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
